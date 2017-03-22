@@ -2,7 +2,6 @@ package com.example.ws719547997.weathertest;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,10 +52,10 @@ public class ChooseAreaFragment extends Fragment {
     private County selectCounty;
     private int currentLevel;
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.choose_area,container,false);
         textView_title= (TextView) view.findViewById(R.id.title_text);
         button_back= (Button) view.findViewById(R.id.back_button);
@@ -68,7 +67,7 @@ public class ChooseAreaFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
